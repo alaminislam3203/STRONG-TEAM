@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strong Team Staffing — Build the Team your Business Needs</title>
+  <!-- Google Fonts: Montserrat & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#1E2F44',
+              darkBlue: '#072A60',
+              midBlue: '#003F91',
+              brightBlue: '#004FB6',
+              gold: '#C19D53',
+              navText: '#5A6D85',
+              navActive: '#1E2F44',
+            }
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Geometric Hero Styling matching Figma 1:1 */
+    .hero-bg {
+      background: linear-gradient(100deg, #002350 0%, #012B63 32%, #02336B 55%, #012964 100%);
+    }
+
+    /* Subtle dark geometric overlays in bottom-left matching Figma */
+    .hero-polygon-left {
+      clip-path: polygon(0 78%, 12% 100%, 0 100%);
+      background: linear-gradient(180deg, rgba(1, 22, 52, 0.7) 0%, rgba(1, 18, 44, 0.95) 100%);
+    }
+
+    .hero-polygon-left-2 {
+      clip-path: polygon(0 58%, 35% 100%, 0 100%);
+      background: linear-gradient(135deg, rgba(2, 34, 78, 0.45) 0%, rgba(1, 24, 56, 0.65) 100%);
+      border-top: 1px solid rgba(56, 128, 220, 0.15);
+    }
+
+    /* Seamless fade on left edge of hero collage */
+    .collage-mask {
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 7%, black 100%);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-slate-800 bg-white overflow-x-hidden selection:bg-brand-brightBlue selection:text-white">
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100 transition-shadow duration-300">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[72px] h-[84px] flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center shrink-0 focus:outline-none group" aria-label="Strong Team Staffing Home">
+        <img 
+          src="./public/logo/logo.png" 
+          alt="Strong Team Staffing Logo" 
+          class="h-[52px] sm:h-[58px] w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+        />
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-9 xl:gap-11" aria-label="Main Navigation">
+        <!-- Active Link: HOME -->
+        <a 
+          href="#home" 
+          data-nav-link
+          class="relative py-2 text-[14.5px] font-semibold tracking-[0.03em] text-brand-navActive uppercase transition-colors"
+        >
+          HOME
+          <span class="nav-indicator absolute bottom-0 left-[-6px] right-[-6px] h-[2px] bg-brand-navActive rounded-full"></span>
+        </a>
+
+        <!-- Dropdown Link: Services -->
+        <div class="relative" id="services-dropdown-wrapper">
+          <button 
+            type="button"
+            id="services-dropdown-btn"
+            aria-expanded="false"
+            class="flex items-center gap-1.5 py-2 text-[15px] font-medium text-brand-navText hover:text-brand-navActive transition-colors focus:outline-none"
+          >
+            <span>Services</span>
+            <img 
+              src="./public/icons/chevron-down.svg" 
+              alt="" 
+              id="services-chevron"
+              class="w-4 h-4 transition-transform duration-200"
+            />
+          </button>
+
+          <!-- Services Dropdown Menu -->
+          <div 
+            id="services-dropdown-menu"
+            class="hidden opacity-0 translate-y-2 transition-all duration-200 absolute left-0 mt-2 w-60 bg-white rounded-xl shadow-xl border border-slate-100 py-2.5 z-50"
+          >
+            <a href="#virtual-assistants" class="block px-4 py-2.5 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-darkBlue transition-colors">
+              Customer Support Specialists
+            </a>
+            <a href="#back-office" class="block px-4 py-2.5 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-darkBlue transition-colors">
+              Dedicated Remote Teams
+            </a>
+            <a href="#sales-sdr" class="block px-4 py-2.5 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-darkBlue transition-colors">
+              Sales &amp; Lead Generation
+            </a>
+            <a href="#admin-ops" class="block px-4 py-2.5 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-darkBlue transition-colors">
+              Back-Office &amp; Operations
+            </a>
+          </div>
+        </div>
+
+        <!-- Link: Industries -->
+        <a 
+          href="#industries" 
+          data-nav-link
+          class="relative py-2 text-[15px] font-medium text-brand-navText hover:text-brand-navActive transition-colors"
+        >
+          Industries
+        </a>
+
+        <!-- Link: How it works -->
+        <a 
+          href="#how-it-works" 
+          data-nav-link
+          class="relative py-2 text-[15px] font-medium text-brand-navText hover:text-brand-navActive transition-colors"
+        >
+          How it works
+        </a>
+
+        <!-- Link: Contact -->
+        <a 
+          href="#contact" 
+          data-nav-link
+          class="relative py-2 text-[15px] font-medium text-brand-navText hover:text-brand-navActive transition-colors"
+        >
+          Contact
+        </a>
+      </nav>
+
+      <!-- Right Action CTA Button (Desktop) -->
+      <div class="hidden lg:flex items-center">
+        <a 
+          href="#quote" 
+          id="nav-quote-btn"
+          class="inline-flex items-center justify-center bg-[#1E2F44] hover:bg-[#142233] text-white text-[14.5px] font-medium px-6 py-[11.5px] rounded-[7px] shadow-sm transition-all duration-200 hover:shadow-md active:scale-[0.98]"
+        >
+          Request a quote
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button 
+        type="button" 
+        id="mobile-menu-btn"
+        aria-label="Toggle Menu"
+        aria-expanded="false"
+        class="lg:hidden inline-flex items-center justify-center p-2.5 rounded-lg text-brand-navy hover:bg-slate-100 focus:outline-none transition-colors"
+      >
+        <img src="./public/icons/menu.svg" id="menu-open-icon" alt="Open menu" class="w-6 h-6" />
+        <img src="./public/icons/close.svg" id="menu-close-icon" alt="Close menu" class="w-6 h-6 hidden" />
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div 
+      id="mobile-menu" 
+      class="hidden lg:hidden bg-white border-t border-slate-100 px-6 pt-4 pb-6 shadow-xl"
+    >
+      <div class="flex flex-col space-y-3">
+        <a href="#home" class="py-2 text-sm font-bold text-brand-navActive uppercase tracking-wider border-l-2 border-brand-navActive pl-3">
+          HOME
+        </a>
+        
+        <!-- Mobile Services Accordion -->
+        <div>
+          <button 
+            type="button"
+            id="mobile-services-btn"
+            class="w-full flex items-center justify-between py-2 text-[15px] font-medium text-brand-navText hover:text-brand-navActive"
+          >
+            <span>Services</span>
+            <img src="./public/icons/chevron-down.svg" id="mobile-services-chevron" alt="" class="w-4 h-4 transition-transform duration-200" />
+          </button>
+          <div id="mobile-services-list" class="hidden pl-4 mt-1 space-y-2 border-l border-slate-200">
+            <a href="#virtual-assistants" class="block py-1.5 text-sm text-slate-600 hover:text-brand-darkBlue">Customer Support Specialists</a>
+            <a href="#back-office" class="block py-1.5 text-sm text-slate-600 hover:text-brand-darkBlue">Dedicated Remote Teams</a>
+            <a href="#sales-sdr" class="block py-1.5 text-sm text-slate-600 hover:text-brand-darkBlue">Sales &amp; Lead Generation</a>
+            <a href="#admin-ops" class="block py-1.5 text-sm text-slate-600 hover:text-brand-darkBlue">Back-Office &amp; Operations</a>
+          </div>
+        </div>
+
+        <a href="#industries" class="py-2 text-[15px] font-medium text-brand-navText hover:text-brand-navActive">
+          Industries
+        </a>
+        <a href="#how-it-works" class="py-2 text-[15px] font-medium text-brand-navText hover:text-brand-navActive">
+          How it works
+        </a>
+        <a href="#contact" class="py-2 text-[15px] font-medium text-brand-navText hover:text-brand-navActive">
+          Contact
+        </a>
+
+        <div class="pt-3">
+          <a 
+            href="#quote" 
+            class="w-full inline-flex items-center justify-center bg-[#1E2F44] hover:bg-[#142233] text-white text-[15px] font-medium px-6 py-3 rounded-[7px] shadow-sm transition-colors"
+          >
+            Request a quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="home" class="relative hero-bg overflow-hidden min-h-[560px] lg:h-[620px] xl:h-[650px] flex items-center">
+    
+    <!-- Subtle Geometric Background Shapes (matching Figma left & right facets) -->
+    <div class="hero-polygon-left-2 absolute inset-0 pointer-events-none"></div>
+    <div class="hero-polygon-left absolute inset-0 pointer-events-none"></div>
+    
+    <!-- Diagonal Blue Accent Line on Bottom Right -->
+    <div 
+      class="hidden lg:block absolute right-[-40px] bottom-[52px] w-[260px] h-[3px] bg-gradient-to-r from-[#0B65D6]/80 to-transparent rotate-[28deg] pointer-events-none z-20"
+    ></div>
+
+    <!-- Main Container -->
+    <div class="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[72px] py-14 lg:py-0 h-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-6">
+      
+      <!-- Left Column: Copy & CTAs -->
+      <div class="w-full lg:w-[50%] xl:w-[49%] text-left z-20 lg:mt-4">
+        <h1 class="text-white font-bold text-[36px] sm:text-[46px] lg:text-[52px] xl:text-[58px] leading-[1.18] tracking-[-0.01em] mb-6">
+          Build the Team your<br />
+          Business Needs.
+        </h1>
+
+        <p class="text-white/85 font-normal text-[15.5px] sm:text-[17px] xl:text-[18.5px] leading-[1.6] max-w-[560px] mb-9">
+          Experienced, dependable remote professionals who take work off your plate and move your business forward.
+        </p>
+
+        <!-- Hero CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+          <a 
+            href="#quote" 
+            class="inline-flex items-center justify-center bg-white hover:bg-slate-100 text-[#0A2547] font-bold text-[14.5px] sm:text-[15px] px-7 py-[13.5px] rounded-[6px] shadow-md transition-all duration-200 hover:shadow-lg active:scale-[0.98]"
+          >
+            Request a quote
+          </a>
+
+          <a 
+            href="#how-it-works" 
+            class="inline-flex items-center justify-center bg-transparent hover:bg-white/10 text-white font-semibold text-[14.5px] sm:text-[15px] px-7 py-[12.5px] rounded-[6px] border border-white/65 hover:border-white transition-all duration-200 active:scale-[0.98]"
+          >
+            See how it works
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Geometric Diamond Collage -->
+      <div class="w-full lg:w-[50%] xl:w-[51%] relative flex items-center justify-center lg:justify-end">
+        
+        <!-- Desktop / Tablet Geometric Collage Canvas -->
+        <div class="relative w-full max-w-[660px] lg:max-w-none lg:w-[740px] xl:w-[780px] aspect-[515/450] lg:mr-[-72px]">
+          <img 
+            src="./public/hero/hero-collage.png" 
+            alt="Experienced remote professionals collaborating and supporting clients" 
+            class="collage-mask w-full h-full object-cover object-right select-none"
+          />
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main JavaScript -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
