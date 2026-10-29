@@ -43,3 +43,9 @@
 .diamond-frame:hover img {
   transform: rotate(-45deg) scale(1.48);
 }
+
+/* Why Choose Us Section Soft Multi-Stop Gradient matching Figma 1:1 */
+.why-choose-bg {
+  background: linear-gradient(108deg, #E8EEF5 0%, #E7F2FD 42%, #F6FBE9 74%, #FDF8E1 100%);
+}
+
