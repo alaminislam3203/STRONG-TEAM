@@ -1055,6 +1055,92 @@
     </div>
   </section>
 
+  <!-- ==================== FOUNDER STORY SECTION ==================== -->
+  <section id="founder-story" class="relative bg-[#1B2B4B] overflow-hidden py-16 sm:py-20 lg:py-24">
+    
+    <!-- Top-Left Decorative Geometric Pattern & Subtle Circle Outline (matching Figma) -->
+    <div class="absolute top-0 left-0 pointer-events-none select-none z-0">
+      <svg width="210" height="210" viewBox="0 0 210 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Subtle circular arc -->
+        <circle cx="35" cy="35" r="108" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1" />
+        <!-- Diagonal geometric bars -->
+        <path d="M-25 18L48 -55L76 -27L3 46L-25 18Z" fill="#253A63" fill-opacity="0.65" />
+        <path d="M-35 72L68 -31L96 -3L-7 100L-35 72Z" fill="#253A63" fill-opacity="0.65" />
+        <path d="M-15 118L36 67L64 95L13 146L-15 118Z" fill="#253A63" fill-opacity="0.55" />
+      </svg>
+    </div>
+
+    <!-- Main Container -->
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[72px]">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+        
+        <!-- Left Column: Story Copy & CTA -->
+        <div class="w-full lg:w-[54%] text-left">
+          <!-- Eyebrow -->
+          <p class="text-white/85 text-[14.5px] font-medium tracking-[0.01em] mb-4">
+            Founder Story
+          </p>
+
+          <!-- Main Heading -->
+          <h2 class="text-white font-bold text-[34px] sm:text-[44px] lg:text-[50px] leading-[1.18] tracking-[-0.01em] mb-6">
+            Built from real Business<br />
+            experience.
+          </h2>
+
+          <!-- Description Paragraph -->
+          <p class="text-white/85 text-[15.5px] sm:text-[17px] lg:text-[17.5px] leading-[1.62] font-normal max-w-[615px] mb-9">
+            Strong Team Staffing was founded by Mitchell Levin, based on hands-on montience buildings and managing a remote team for Cor Cartier Group. That experience showed how the right people, in the right roles, can make a big difference.
+          </p>
+
+          <!-- Watch the Video Button -->
+          <div>
+            <button 
+              type="button"
+              id="watch-story-btn"
+              class="inline-flex items-center justify-center bg-white hover:bg-slate-100 text-[#182442] font-bold text-[14.5px] px-7 py-3.5 rounded-[7px] shadow-md transition-all duration-200 hover:shadow-lg active:scale-[0.98] focus:outline-none"
+            >
+              Watch the video
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Founder Video Card -->
+        <div class="w-full lg:w-[46%] flex justify-center lg:justify-end">
+          <div 
+            id="founder-video-card"
+            class="relative w-full max-w-[490px] h-[320px] sm:h-[375px] rounded-[14px] overflow-hidden shadow-[0_20px_50px_rgba(8,15,32,0.45)] bg-[#111C33] group cursor-pointer"
+          >
+            <!-- Video Element from public/founder-story/founder-story.mp4 -->
+            <video 
+              id="founder-video"
+              src="./public/founder-story/founder-story.mp4#t=0.1" 
+              preload="metadata"
+              playsinline
+              class="w-full h-full object-cover object-top"
+            ></video>
+
+            <!-- Center White Play Button Overlay -->
+            <button 
+              type="button"
+              id="founder-play-overlay"
+              aria-label="Play Founder Story Video"
+              class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors duration-200 focus:outline-none"
+            >
+              <span class="w-[68px] h-[68px] sm:w-[74px] sm:h-[74px] rounded-full bg-white shadow-[0_10px_28px_rgba(0,0,0,0.32)] flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
+                <img 
+                  src="./public/icons/play-triangle.svg" 
+                  alt="" 
+                  class="w-7 h-7 translate-x-[2px]"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Main JavaScript -->
   <script src="./js/main.js"></script>
 </body>

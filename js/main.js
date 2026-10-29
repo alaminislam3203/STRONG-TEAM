@@ -228,5 +228,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize slider track fill on page load
   updateSliderTrackFill();
+
+  // 7. Founder Story Video Play / Pause Controls
+  const founderVideo = document.getElementById('founder-video');
+  const founderPlayOverlay = document.getElementById('founder-play-overlay');
+  const watchStoryBtn = document.getElementById('watch-story-btn');
+
+  function toggleFounderVideo() {
+    if (!founderVideo) return;
+    if (founderVideo.paused) {
+      founderVideo.controls = true;
+      founderVideo.play();
+      if (founderPlayOverlay) {
+        founderPlayOverlay.classList.add('hidden');
+      }
+    } else {
+      founderVideo.pause();
+    }
+  }
+
+  if (founderPlayOverlay) {
+    founderPlayOverlay.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleFounderVideo();
+    });
+  }
+
+  if (watchStoryBtn) {
+    watchStoryBtn.addEventListener('click', () => {
+      if (founderVideo) {
+        founderVideo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        toggleFounderVideo();
+      }
+    });
+  }
+
+  if (founderVideo) {
+    founderVideo.addEventListener('pause', () => {
+      if (founderPlayOverlay) {
+        founderPlayOverlay.classList.remove('hidden');
+      }
+      founderVideo.controls = false;
+    });
+
+    founderVideo.addEventListener('ended', () => {
+      if (founderPlayOverlay) {
+        founderPlayOverlay.classList.remove('hidden');
+      }
+      founderVideo.controls = false;
+    });
+  }
 });
 
