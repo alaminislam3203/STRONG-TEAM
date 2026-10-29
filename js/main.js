@@ -306,4 +306,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // ==================== CONTACT FORM SUBMISSION ====================
+  const contactQuoteForm = document.getElementById('contact-quote-form');
+  const contactFormFeedback = document.getElementById('contact-form-feedback');
+
+  if (contactQuoteForm) {
+    contactQuoteForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (contactFormFeedback) {
+        contactFormFeedback.classList.remove('hidden');
+      }
+      contactQuoteForm.reset();
+    });
+  }
 });

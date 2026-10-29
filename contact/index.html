@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Strong Team Staffing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="font-sans antialiased text-slate-800 bg-[#F9FAFC] overflow-x-hidden selection:bg-brand-brightBlue selection:text-white">
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100 transition-shadow duration-300">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[72px] h-[84px] flex items-center justify-between">
+      
+      <a href="/index.html" class="flex items-center shrink-0 focus:outline-none group" aria-label="Strong Team Staffing Home">
+        <img 
+          src="/public/logo/logo.png" 
+          alt="Strong Team Staffing Logo" 
+          class="h-[52px] sm:h-[58px] w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+        />
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-9 xl:gap-11" aria-label="Main Navigation">
+        <a 
+          href="/index.html" 
+          class="relative py-2 text-[14.5px] font-medium tracking-[0.03em] text-brand-navText hover:text-brand-navActive uppercase transition-colors"
+        >
+          HOME
+        </a>
+
+        <div class="relative py-4" id="services-dropdown-wrapper">
+          <button 
+            type="button"
+            id="services-dropdown-btn"
+            aria-expanded="false"
+            class="flex items-center gap-1.5 py-2 text-[15px] font-medium text-brand-navText hover:text-brand-navActive transition-colors focus:outline-none"
+          >
+            <span>Services</span>
+            <img 
+              src="/public/icons/chevron-down.svg" 
+              alt="" 
+              id="services-chevron"
+              class="w-4 h-4 transition-transform duration-200"
+            />
+          </button>
+
+          <div 
+            id="services-dropdown-menu"
+            class="hidden opacity-0 translate-y-2 transition-all duration-200 absolute left-1/2 -translate-x-[38%] top-full pt-1 w-[860px] xl:w-[960px] z-50"
+          >
+            <div class="bg-white rounded-[8px] shadow-[0_20px_50px_rgba(15,23,42,0.14)] border border-slate-100 px-10 py-9 grid grid-cols-3 gap-x-10 gap-y-8 text-left">
+              
+              <a href="/service-details.html?service=customer-support" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Customer Support
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Provide exceptional support to your Customers Via Phone, email or chat
+                </p>
+              </a>
+
+              <a href="/service-details.html?service=operations-coordinator" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Operations Coordinator
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Qualified conversations and full calendars, without the busywork.
+                </p>
+              </a>
+
+              <a href="/service-details.html?service=sales-support" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Sales support
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Consistent outreach that helps your pipeline grow.
+                </p>
+              </a>
+
+              <a href="/service-details.html?service=bookkeeping" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Bookkeeping
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Keep your financial records organized and up to date
+                </p>
+              </a>
+
+              <a href="/service-details.html?service=marketing-assistant" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Marketing assistant
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Create, schedule and manage your content across platforms.
+                </p>
+              </a>
+
+              <a href="/service-details.html?service=administrative-support" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Administrative support
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Reliable operational help that keeps every day moving.
+                </p>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <a 
+          href="/index.html#industries" 
+          class="relative py-2 text-[15px] font-medium text-brand-navText hover:text-brand-navActive transition-colors"
+        >
+          Industries
+        </a>
+
+        <a 
+          href="/index.html#how-it-works" 
+          class="relative py-2 text-[15px] font-medium text-brand-navText hover:text-brand-navActive transition-colors"
+        >
+          How it works
+        </a>
+
+        <a 
+          href="/contact/" 
+          class="relative py-2 text-[15px] font-semibold text-brand-navActive transition-colors"
+        >
+          Contact
+          <span class="nav-indicator absolute bottom-0 left-[-6px] right-[-6px] h-[2px] bg-brand-navActive rounded-full"></span>
+        </a>
+      </nav>
+
+      <div class="hidden lg:flex items-center">
+        <a 
+          href="#contact-form-section" 
+          class="inline-flex items-center justify-center bg-[#1E2F44] hover:bg-[#142233] text-white text-[14.5px] font-medium px-6 py-[11.5px] rounded-[7px] shadow-sm transition-all duration-200 hover:shadow-md active:scale-[0.98]"
+        >
+          Request a quote
+        </a>
+      </div>
+
+      <button 
+        type="button" 
+        id="mobile-menu-btn"
+        aria-label="Toggle Menu"
+        aria-expanded="false"
+        class="lg:hidden inline-flex items-center justify-center p-2.5 rounded-lg text-brand-navy hover:bg-slate-100 focus:outline-none transition-colors"
+      >
+        <img src="/public/icons/menu.svg" id="menu-open-icon" alt="Open menu" class="w-6 h-6" />
+        <img src="/public/icons/close.svg" id="menu-close-icon" alt="Close menu" class="w-6 h-6 hidden" />
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-6 pt-4 pb-6 shadow-xl">
+      <div class="flex flex-col space-y-3">
+        <a href="/index.html" class="py-2 text-sm font-medium text-brand-navText uppercase tracking-wider">HOME</a>
+        <a href="/service/" class="py-2 text-[15px] font-medium text-brand-navText">Services</a>
+        <a href="/index.html#industries" class="py-2 text-[15px] font-medium text-brand-navText">Industries</a>
+        <a href="/index.html#how-it-works" class="py-2 text-[15px] font-medium text-brand-navText">How it works</a>
+        <a href="/contact/" class="py-2 text-[15px] font-bold text-brand-navActive border-l-2 border-brand-navActive pl-3">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== CONTACT HERO BANNER ==================== -->
+  <section class="relative hero-bg py-16 sm:py-20 lg:py-24 overflow-hidden text-white">
+    <div class="hero-polygon-left-2 absolute inset-0 pointer-events-none"></div>
+    <div class="hero-polygon-left absolute inset-0 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[72px]">
+      <div class="flex items-center gap-2 text-white/75 text-xs sm:text-sm font-medium mb-4">
+        <a href="/index.html" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-white font-semibold">Contact</span>
+      </div>
+
+      <div class="max-w-[740px]">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white text-[11.5px] font-semibold uppercase tracking-[0.06em] px-4 py-1.5 rounded-full mb-5 border border-white/20">
+          <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+          <span>GET IN TOUCH</span>
+        </div>
+
+        <h1 class="text-white font-bold text-[34px] sm:text-[46px] lg:text-[54px] leading-[1.18] tracking-[-0.015em] mb-5">
+          Let’s Build the Right Team for Your Business.
+        </h1>
+
+        <p class="text-white/85 text-[15.5px] sm:text-[17.5px] leading-[1.65] font-normal max-w-[630px]">
+          Tell us about the roles you need to fill, your daily workflows, and your goals. Our team will respond within 1 business day with a tailored staffing plan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT FORM & INFO SECTION ==================== -->
+  <section id="contact-form-section" class="py-20 lg:py-28 bg-[#F9FAFC]">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[72px]">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-[#18233C] rounded-[16px] p-8 sm:p-9 text-white shadow-[0_16px_40px_rgba(24,35,60,0.18)]">
+            <p class="text-white/75 text-xs font-semibold uppercase tracking-[0.06em] mb-2">
+              Direct Contact
+            </p>
+            <h2 class="text-white font-bold text-[24px] sm:text-[26px] leading-[1.3] mb-4">
+              Talk With Our Staffing Specialists
+            </h2>
+            <p class="text-white/80 text-[14.5px] leading-[1.65] mb-8">
+              Whether you need a single part-time assistant or a full cross-functional remote team, we make the hiring and onboarding process simple.
+            </p>
+
+            <div class="space-y-5 pt-6 border-t border-white/15">
+              <div>
+                <p class="text-white/60 text-xs font-semibold uppercase tracking-wider mb-1">
+                  Email Us
+                </p>
+                <a href="mailto:hello@strongteamstaffing.com" class="text-white hover:text-blue-300 font-semibold text-[16px] transition-colors break-all">
+                  hello@strongteamstaffing.com
+                </a>
+              </div>
+
+              <div>
+                <p class="text-white/60 text-xs font-semibold uppercase tracking-wider mb-1">
+                  Operating Hours
+                </p>
+                <p class="text-white font-semibold text-[16px]">
+                  Monday – Friday · 9:00 AM – 5:00 PM ET
+                </p>
+              </div>
+
+              <div>
+                <p class="text-white/60 text-xs font-semibold uppercase tracking-wider mb-1">
+                  Typical Response Time
+                </p>
+                <p class="text-white font-semibold text-[16px]">
+                  Under 24 Hours (Business Days)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-[16px] p-7 sm:p-8 border border-slate-100 shadow-[0_4px_24px_rgba(15,23,42,0.03)]">
+            <h3 class="text-[#1A2642] font-bold text-[18px] mb-4">
+              What Happens After You Reach Out?
+            </h3>
+            <ul class="space-y-3.5">
+              <li class="flex items-start gap-3">
+                <img src="/public/icons/check-circle-green.svg" alt="" class="w-5 h-5 shrink-0 mt-0.5" />
+                <span class="text-[#4E5D73] text-[14px] leading-[1.55]">
+                  <strong class="text-[#1A2642]">1. Discovery Call:</strong> We review your role requirements, tools, and working hours.
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <img src="/public/icons/check-circle-green.svg" alt="" class="w-5 h-5 shrink-0 mt-0.5" />
+                <span class="text-[#4E5D73] text-[14px] leading-[1.55]">
+                  <strong class="text-[#1A2642]">2. Candidate Shortlist:</strong> Meet pre-vetted, English-proficient candidates who fit your workflow.
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <img src="/public/icons/check-circle-green.svg" alt="" class="w-5 h-5 shrink-0 mt-0.5" />
+                <span class="text-[#4E5D73] text-[14px] leading-[1.55]">
+                  <strong class="text-[#1A2642]">3. Seamless Onboarding:</strong> Your new team member starts working while we handle staffing &amp; billing.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-white rounded-[16px] p-7 sm:p-10 shadow-[0_6px_32px_rgba(15,23,42,0.04)] border border-slate-100">
+          <h2 class="text-[#1A2642] font-bold text-[24px] sm:text-[28px] leading-[1.25] mb-2">
+            Request a Custom Quote
+          </h2>
+          <p class="text-[#5E6B82] text-[14.5px] leading-[1.6] mb-8">
+            Fill out the form below and we will get back to you with candidate options and transparent pricing.
+          </p>
+
+          <form id="contact-quote-form" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="full-name" class="block text-[#1A2642] font-semibold text-[13.5px] mb-2">
+                  Full Name *
+                </label>
+                <input 
+                  type="text" 
+                  id="full-name" 
+                  name="fullName"
+                  required
+                  placeholder="John Doe"
+                  class="w-full bg-[#F9FAFC] border border-slate-200 focus:border-[#1A2642] focus:bg-white rounded-[8px] px-4 py-3 text-[14px] text-[#1A2642] placeholder:text-slate-400 focus:outline-none transition-colors"
+                />
+              </div>
+
+              <div>
+                <label for="work-email" class="block text-[#1A2642] font-semibold text-[13.5px] mb-2">
+                  Work Email *
+                </label>
+                <input 
+                  type="email" 
+                  id="work-email" 
+                  name="email"
+                  required
+                  placeholder="john@company.com"
+                  class="w-full bg-[#F9FAFC] border border-slate-200 focus:border-[#1A2642] focus:bg-white rounded-[8px] px-4 py-3 text-[14px] text-[#1A2642] placeholder:text-slate-400 focus:outline-none transition-colors"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="phone-number" class="block text-[#1A2642] font-semibold text-[13.5px] mb-2">
+                  Phone Number
+                </label>
+                <input 
+                  type="tel" 
+                  id="phone-number" 
+                  name="phone"
+                  placeholder="+1 (555) 000-0000"
+                  class="w-full bg-[#F9FAFC] border border-slate-200 focus:border-[#1A2642] focus:bg-white rounded-[8px] px-4 py-3 text-[14px] text-[#1A2642] placeholder:text-slate-400 focus:outline-none transition-colors"
+                />
+              </div>
+
+              <div>
+                <label for="company-name" class="block text-[#1A2642] font-semibold text-[13.5px] mb-2">
+                  Company Name
+                </label>
+                <input 
+                  type="text" 
+                  id="company-name" 
+                  name="company"
+                  placeholder="Your Company LLC"
+                  class="w-full bg-[#F9FAFC] border border-slate-200 focus:border-[#1A2642] focus:bg-white rounded-[8px] px-4 py-3 text-[14px] text-[#1A2642] placeholder:text-slate-400 focus:outline-none transition-colors"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="service-needed" class="block text-[#1A2642] font-semibold text-[13.5px] mb-2">
+                  Role / Service Needed *
+                </label>
+                <div class="relative">
+                  <select 
+                    id="service-needed" 
+                    name="service"
+                    required
+                    class="w-full appearance-none bg-[#F9FAFC] border border-slate-200 focus:border-[#1A2642] focus:bg-white rounded-[8px] px-4 py-3 text-[14px] text-[#1A2642] font-medium focus:outline-none cursor-pointer transition-colors"
+                  >
+                    <option value="customer-support">Customer Support</option>
+                    <option value="operations-coordinator">Operations Coordinator</option>
+                    <option value="sales-support">Sales Support</option>
+                    <option value="bookkeeping">Bookkeeping Assistant</option>
+                    <option value="marketing-assistant">Marketing Assistant</option>
+                    <option value="administrative-support">Administrative Support</option>
+                    <option value="multiple-roles">Multiple Roles / Custom Team</option>
+                  </select>
+                  <img src="/public/icons/chevron-down.svg" alt="" class="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none opacity-75" />
+                </div>
+              </div>
+
+              <div>
+                <label for="hours-needed" class="block text-[#1A2642] font-semibold text-[13.5px] mb-2">
+                  Weekly Hours per Person
+                </label>
+                <div class="relative">
+                  <select 
+                    id="hours-needed" 
+                    name="hours"
+                    class="w-full appearance-none bg-[#F9FAFC] border border-slate-200 focus:border-[#1A2642] focus:bg-white rounded-[8px] px-4 py-3 text-[14px] text-[#1A2642] font-medium focus:outline-none cursor-pointer transition-colors"
+                  >
+                    <option value="40" selected>Full-Time (40 hrs / week)</option>
+                    <option value="30">30 hrs / week</option>
+                    <option value="20">Part-Time (20 hrs / week)</option>
+                    <option value="10">10 hrs / week</option>
+                  </select>
+                  <img src="/public/icons/chevron-down.svg" alt="" class="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none opacity-75" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label for="project-details" class="block text-[#1A2642] font-semibold text-[13.5px] mb-2">
+                Tell Us About Your Needs *
+              </label>
+              <textarea 
+                id="project-details" 
+                name="message"
+                rows="4"
+                required
+                placeholder="Share the daily tasks, software tools, or goals you'd like your remote team member to support..."
+                class="w-full bg-[#F9FAFC] border border-slate-200 focus:border-[#1A2642] focus:bg-white rounded-[8px] p-4 text-[14px] text-[#1A2642] placeholder:text-slate-400 focus:outline-none transition-colors"
+              ></textarea>
+            </div>
+
+            <div id="contact-form-feedback" class="hidden rounded-[8px] bg-emerald-50 border border-emerald-200 px-4 py-3 text-emerald-800 text-sm font-medium">
+              Thank you! Your request has been received. Our team will reach out within 1 business day.
+            </div>
+
+            <div class="pt-2">
+              <button 
+                type="submit" 
+                class="w-full sm:w-auto inline-flex items-center justify-center bg-[#18233C] hover:bg-[#10192D] text-white font-bold text-[14.5px] px-9 py-4 rounded-[8px] shadow-md transition-all duration-200 hover:shadow-lg active:scale-[0.99]"
+              >
+                Submit Request
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER SECTION ==================== -->
+  <footer id="contact" class="bg-[#0F2342] text-white pt-16 sm:pt-20 pb-10">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[72px]">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-white/15">
+        <div class="lg:col-span-5">
+          <a href="/index.html" class="inline-flex items-center justify-center bg-white px-4 py-2.5 mb-6">
+            <img src="/public/logo/logo.png" alt="Strong Team Staffing Logo" class="h-[46px] sm:h-[52px] w-auto object-contain" />
+          </a>
+          <p class="text-[#94A3B8] text-[13.5px] sm:text-[14px] leading-[1.6] max-w-[260px]">
+            Remote talent. Real support.<br />
+            A stronger team for what's next.
+          </p>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h3 class="text-white font-medium text-[18px] mb-5">Lead types</h3>
+          <ul class="space-y-3">
+            <li><a href="/index.html" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>Home</span></a></li>
+            <li><a href="/service/" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>Services</span></a></li>
+            <li><a href="/index.html#industries" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>Industries</span></a></li>
+            <li><a href="/index.html#how-it-works" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>How it works</span></a></li>
+            <li><a href="/contact/" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>Contact</span></a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h3 class="text-white font-medium text-[18px] mb-5">Services</h3>
+          <ul class="space-y-3">
+            <li><a href="/service-details.html?service=customer-support" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>Customer support</span></a></li>
+            <li><a href="/service-details.html?service=operations-coordinator" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>Operations Coordinator</span></a></li>
+            <li><a href="/service-details.html?service=administrative-support" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>Administrative support</span></a></li>
+            <li><a href="/service-details.html?service=sales-support" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>Sales support</span></a></li>
+            <li><a href="/service-details.html?service=bookkeeping" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>Bookkeeping</span></a></li>
+            <li><a href="/service-details.html?service=marketing-assistant" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>Marketing assistant</span></a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h3 class="text-white font-medium text-[18px] mb-5">Connect</h3>
+          <ul class="space-y-3">
+            <li><a href="mailto:hello@strongteamstaffing.com" class="inline-flex items-center gap-2.5 text-[#94A3B8] hover:text-white text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>hello@strongteamstaffing.com</span></a></li>
+            <li class="inline-flex items-center gap-2.5 text-[#94A3B8] text-[13.5px]"><img src="/public/icons/caret-right-white.svg" alt="" class="w-2 h-2.5" /><span>Mon–Fri · 9am–5pm ET</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-[#94A3B8] text-[12.5px]">
+        <p>©2026 ARCHI WAY . All rights reserved</p>
+        <div class="flex flex-wrap items-center gap-6 sm:gap-8">
+          <a href="#privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#terms" class="hover:text-white transition-colors">Terms &amp; Conditions</a>
+          <a href="#service-terms" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
