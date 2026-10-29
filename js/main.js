@@ -21,14 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navLinks = document.querySelectorAll('[data-nav-link]');
 
-  // 1. Desktop "Services" Dropdown Toggle
+  // 1. Desktop "Services" Mega Menu Card (Hover + Click Support)
   let isServicesOpen = false;
+  let servicesHoverTimeout = null;
 
   function toggleServicesDropdown(forceState) {
     isServicesOpen = typeof forceState === 'boolean' ? forceState : !isServicesOpen;
     servicesDropdownBtn.setAttribute('aria-expanded', String(isServicesOpen));
 
     if (isServicesOpen) {
+      clearTimeout(servicesHoverTimeout);
       servicesDropdownMenu.classList.remove('hidden');
       requestAnimationFrame(() => {
         servicesDropdownMenu.classList.remove('opacity-0', 'translate-y-2');
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       servicesDropdownMenu.classList.remove('opacity-100', 'translate-y-0');
       servicesDropdownMenu.classList.add('opacity-0', 'translate-y-2');
       servicesChevron.classList.remove('rotate-180');
-      setTimeout(() => {
+      servicesHoverTimeout = setTimeout(() => {
         if (!isServicesOpen) {
           servicesDropdownMenu.classList.add('hidden');
         }
@@ -47,7 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (servicesDropdownBtn) {
+  if (servicesWrapper && servicesDropdownBtn) {
+    // Open on hover
+    servicesWrapper.addEventListener('mouseenter', () => {
+      clearTimeout(servicesHoverTimeout);
+      toggleServicesDropdown(true);
+    });
+
+    // Close on mouse leave
+    servicesWrapper.addEventListener('mouseleave', () => {
+      toggleServicesDropdown(false);
+    });
+
+    // Also allow click toggle for touch/keyboard users
     servicesDropdownBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       toggleServicesDropdown();
