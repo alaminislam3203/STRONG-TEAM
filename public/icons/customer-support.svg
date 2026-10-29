@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+  <!-- Headset band -->
+  <path d="M5.5 15V13C5.5 8.30558 9.30558 4.5 14 4.5C18.6944 4.5 22.5 8.30558 22.5 13V17.5C22.5 20.5376 20.0376 23 17 23H14" stroke="#182442" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Left earpad -->
+  <rect x="5.5" y="13.5" width="4" height="6" rx="2" stroke="#182442" stroke-width="1.8"/>
+  <!-- Right earpad -->
+  <rect x="18.5" y="13.5" width="4" height="6" rx="2" stroke="#182442" stroke-width="1.8"/>
+</svg>
+
