@@ -736,6 +736,325 @@
     </div>
   </section>
 
+  <!-- ==================== ESTIMATE YOUR COST CALCULATOR SECTION ==================== -->
+  <section id="cost-calculator" class="bg-[#F9FAFC] py-20 lg:py-28">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[72px]">
+      
+      <!-- Section Header (Centered) -->
+      <div class="text-center max-w-[680px] mx-auto mb-12 lg:mb-14">
+        <p class="text-[#3C5A82] text-[13.5px] font-medium tracking-[0.02em] mb-2.5">
+          Estimate Your cost
+        </p>
+        <h2 class="text-[#1A2642] font-bold text-[32px] sm:text-[42px] lg:text-[46px] leading-[1.2] tracking-[-0.015em] mb-3.5">
+          See What your team could cost.
+        </h2>
+        <p class="text-[#637085] text-[14.5px] sm:text-[15.5px] leading-[1.6] font-normal">
+          Use our simple calculator to get monthly cost estimate based on your team size working hours.
+        </p>
+      </div>
+
+      <!-- Calculator 2-Column Layout -->
+      <div class="max-w-[1160px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-7 items-stretch">
+        
+        <!-- Left Card: Role & Industry Selector (7 cols on lg) -->
+        <div class="lg:col-span-7 bg-white rounded-[14px] p-6 sm:p-8 lg:p-9 shadow-[0_6px_28px_rgba(15,23,42,0.03)] border border-slate-100/90 flex flex-col justify-between">
+          <div>
+            <!-- Card Heading -->
+            <h3 class="text-[#1A2642] font-bold text-[20px] sm:text-[22px] leading-[1.3] mb-1.5">
+              Where could you use a hand?
+            </h3>
+            <p class="text-[#4E5D73] text-[13.5px] leading-[1.5] mb-6">
+              Choose a role to see what your new team member could on.
+            </p>
+
+            <!-- Industry Select Dropdown -->
+            <div class="mb-6">
+              <label for="industry-select" class="block text-[#1A2642] font-bold text-[15.5px] mb-2.5">
+                Your industry
+              </label>
+              <div class="relative">
+                <select 
+                  id="industry-select" 
+                  class="w-full appearance-none bg-white border border-slate-200 hover:border-slate-300 focus:border-[#1A2642] rounded-[8px] px-4 py-3 text-[13.5px] text-[#5A6880] font-medium focus:outline-none transition-colors cursor-pointer"
+                >
+                  <option value="home-services" selected>Home services</option>
+                  <option value="e-commerce">E-Commerce &amp; Retail</option>
+                  <option value="real-estate">Real Estate &amp; Property Management</option>
+                  <option value="healthcare">Healthcare &amp; Medical</option>
+                  <option value="saas-tech">SaaS &amp; Technology</option>
+                  <option value="professional-services">Financial &amp; Professional Services</option>
+                </select>
+                <img 
+                  src="./public/icons/chevron-down.svg" 
+                  alt="" 
+                  class="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none opacity-75"
+                />
+              </div>
+            </div>
+
+            <!-- 6 Role Selection Cards Grid (2x3) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8" id="role-cards-grid">
+              
+              <!-- Role 1: Administrative support (Active by default) -->
+              <button 
+                type="button"
+                data-role-card
+                data-role-title="Keep the everyday details moving."
+                data-role-badge="Get your Time Back"
+                data-role-min="10"
+                data-role-max="15"
+                data-role-tasks="Inbox and calendar management|Data entry and document preparation|Appointment scheduling and follow-ups"
+                class="role-btn flex items-center justify-between px-4 py-3.5 rounded-[9px] border border-[#3E526E] bg-[#E3E7EE] text-left transition-all duration-200"
+              >
+                <span class="flex items-center gap-3">
+                  <img src="./public/icons/administrative-support.svg" alt="" class="w-5 h-5 shrink-0" />
+                  <span class="role-label text-[#182442] font-bold text-[13px]">Administrative support</span>
+                </span>
+                <img src="./public/icons/radio-checked-navy.svg" alt="" class="role-radio w-5 h-5 shrink-0" />
+              </button>
+
+              <!-- Role 2: Customer Support -->
+              <button 
+                type="button"
+                data-role-card
+                data-role-title="Deliver fast, friendly customer care."
+                data-role-badge="Delight Every Customer"
+                data-role-min="11"
+                data-role-max="16"
+                data-role-tasks="Phone, live chat, and email ticket resolution|Order tracking, returns, and billing inquiries|CRM updates and customer satisfaction follow-ups"
+                class="role-btn flex items-center justify-between px-4 py-3.5 rounded-[9px] border border-slate-300 bg-white hover:bg-slate-50 text-left transition-all duration-200"
+              >
+                <span class="flex items-center gap-3">
+                  <img src="./public/icons/customer-support.svg" alt="" class="w-5 h-5 shrink-0 opacity-75" />
+                  <span class="role-label text-[#4F5E78] font-medium text-[13px]">Customer Support</span>
+                </span>
+                <img src="./public/icons/radio-unchecked.svg" alt="" class="role-radio w-5 h-5 shrink-0" />
+              </button>
+
+              <!-- Role 3: Sales Support -->
+              <button 
+                type="button"
+                data-role-card
+                data-role-title="Keep your sales pipeline full and active."
+                data-role-badge="Accelerate Revenue"
+                data-role-min="12"
+                data-role-max="18"
+                data-role-tasks="Lead research, qualification, and cold outreach|CRM pipeline hygiene and deal stage updates|Discovery call scheduling and proposal follow-ups"
+                class="role-btn flex items-center justify-between px-4 py-3.5 rounded-[9px] border border-slate-300 bg-white hover:bg-slate-50 text-left transition-all duration-200"
+              >
+                <span class="flex items-center gap-3">
+                  <img src="./public/icons/sales-support.svg" alt="" class="w-5 h-5 shrink-0 opacity-75" />
+                  <span class="role-label text-[#4F5E78] font-medium text-[13px]">Sales Support</span>
+                </span>
+                <img src="./public/icons/radio-unchecked.svg" alt="" class="role-radio w-5 h-5 shrink-0" />
+              </button>
+
+              <!-- Role 4: Marketing assistant -->
+              <button 
+                type="button"
+                data-role-card
+                data-role-title="Stay consistent across every channel."
+                data-role-badge="Grow Your Brand"
+                data-role-min="11"
+                data-role-max="16"
+                data-role-tasks="Social media scheduling and community replies|Email newsletter formatting and campaign setup|Content publishing and marketing analytics reports"
+                class="role-btn flex items-center justify-between px-4 py-3.5 rounded-[9px] border border-slate-300 bg-white hover:bg-slate-50 text-left transition-all duration-200"
+              >
+                <span class="flex items-center gap-3">
+                  <img src="./public/icons/marketing-assistant.svg" alt="" class="w-5 h-5 shrink-0" />
+                  <span class="role-label text-[#4F5E78] font-medium text-[13px]">Marketing assistant</span>
+                </span>
+                <img src="./public/icons/radio-unchecked.svg" alt="" class="role-radio w-5 h-5 shrink-0" />
+              </button>
+
+              <!-- Role 5: Bookkeeping assistant -->
+              <button 
+                type="button"
+                data-role-card
+                data-role-title="Keep your books accurate and up to date."
+                data-role-badge="Streamline Finances"
+                data-role-min="12"
+                data-role-max="17"
+                data-role-tasks="Invoice generation and accounts receivable follow-up|Expense categorization and bank reconciliation|Monthly financial reporting and payroll prep"
+                class="role-btn flex items-center justify-between px-4 py-3.5 rounded-[9px] border border-slate-300 bg-white hover:bg-slate-50 text-left transition-all duration-200"
+              >
+                <span class="flex items-center gap-3">
+                  <img src="./public/icons/bookkeeping-assistant.svg" alt="" class="w-5 h-5 shrink-0" />
+                  <span class="role-label text-[#4F5E78] font-medium text-[13px]">Bookkeeping assistant</span>
+                </span>
+                <img src="./public/icons/radio-unchecked.svg" alt="" class="role-radio w-5 h-5 shrink-0" />
+              </button>
+
+              <!-- Role 6: Operational coordinator -->
+              <button 
+                type="button"
+                data-role-card
+                data-role-title="Coordinate workflows without bottlenecks."
+                data-role-badge="Scale Operations"
+                data-role-min="12"
+                data-role-max="18"
+                data-role-tasks="Vendor, dispatch, and field team coordination|SOP documentation and project task tracking|Daily operational reporting and quality checks"
+                class="role-btn flex items-center justify-between px-4 py-3.5 rounded-[9px] border border-slate-300 bg-white hover:bg-slate-50 text-left transition-all duration-200"
+              >
+                <span class="flex items-center gap-3">
+                  <img src="./public/icons/operations-coordinator.svg" alt="" class="w-5 h-5 shrink-0 opacity-75" />
+                  <span class="role-label text-[#4F5E78] font-medium text-[13px]">Operational coordinator</span>
+                </span>
+                <img src="./public/icons/radio-unchecked.svg" alt="" class="role-radio w-5 h-5 shrink-0" />
+              </button>
+
+            </div>
+          </div>
+
+          <!-- Bottom Role Details Box -->
+          <div class="pt-2">
+            <div class="flex items-start gap-4 mb-5">
+              <!-- Dark Navy Calendar Icon Box -->
+              <div class="w-[52px] h-[52px] rounded-[11px] bg-[#182442] flex items-center justify-center shrink-0 shadow-sm">
+                <img src="./public/icons/calendar-white.svg" alt="" class="w-6 h-6" />
+              </div>
+
+              <div>
+                <p id="calc-role-badge" class="text-[#3C5270] text-[12px] font-semibold mb-0.5">
+                  Get your Time Back
+                </p>
+                <h4 id="calc-role-title" class="text-[#1A2642] font-bold text-[18px] sm:text-[19px] leading-[1.3] mb-1.5">
+                  Keep the everyday details moving.
+                </h4>
+                <p class="text-[#2B3A55] text-[11.5px] font-bold leading-relaxed">
+                  Use our simple calculator to get monthly cost estimate based on your team size working hours.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bullet Checkmarks List -->
+            <ul id="calc-role-tasks" class="space-y-3 pl-4 sm:pl-[68px]">
+              <li class="flex items-center gap-2.5 text-[#2B3D5B] text-[12.5px] font-semibold">
+                <img src="./public/icons/check-navy.svg" alt="" class="w-3.5 h-3.5 shrink-0" />
+                <span>Inbox and calendar management</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-[#2B3D5B] text-[12.5px] font-semibold">
+                <img src="./public/icons/check-navy.svg" alt="" class="w-3.5 h-3.5 shrink-0" />
+                <span>Data entry and document preparation</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-[#2B3D5B] text-[12.5px] font-semibold">
+                <img src="./public/icons/check-navy.svg" alt="" class="w-3.5 h-3.5 shrink-0" />
+                <span>Appointment scheduling and follow-ups</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Card: Dark Navy Cost Summary & Interactive Controls (5 cols on lg) -->
+        <div class="lg:col-span-5 bg-[#18233C] rounded-[14px] p-6 sm:p-8 lg:p-9 text-white shadow-[0_16px_40px_rgba(24,35,60,0.22)] flex flex-col justify-between">
+          <div>
+            <!-- Top Label & Heading -->
+            <p class="text-white/75 text-[12px] font-medium tracking-[0.02em] mb-2">
+              Build Your Team
+            </p>
+            <h3 class="text-white font-semibold text-[23px] sm:text-[25px] leading-[1.3] mb-6">
+              A Stronger team,<br />
+              A clear Starting Cost.
+            </h3>
+
+            <!-- Hourly Rate Display -->
+            <div class="pb-6 border-b border-white/15">
+              <div class="flex items-baseline gap-1">
+                <span id="calc-hourly-rate" class="text-white font-bold text-[36px] sm:text-[40px] leading-none tracking-tight">$10-15</span>
+                <span class="text-white/80 text-[18px] font-normal">/hour</span>
+              </div>
+            </div>
+
+            <!-- Hours Per Week Slider -->
+            <div class="py-6">
+              <div class="flex items-center justify-between mb-3.5">
+                <label for="hours-slider" class="text-white font-medium text-[15.5px]">
+                  Hours per week
+                </label>
+                <span id="calc-hours-label" class="text-white/90 text-[12.5px] font-semibold">
+                  40 hrs / person
+                </span>
+              </div>
+
+              <!-- Range Input -->
+              <div class="relative flex items-center">
+                <input 
+                  type="range" 
+                  id="hours-slider" 
+                  min="10" 
+                  max="40" 
+                  step="5" 
+                  value="40"
+                  class="cost-slider"
+                />
+              </div>
+
+              <div class="flex items-center justify-between mt-2.5 text-[11.5px] font-semibold text-white/85">
+                <span>10 hours</span>
+                <span>40 hours</span>
+              </div>
+            </div>
+
+            <!-- Team Members Dropdown Row -->
+            <div class="pb-6 border-b border-white/15 flex items-center justify-between gap-4">
+              <label for="team-size-select" class="text-white font-medium text-[16px]">
+                Team members
+              </label>
+
+              <div class="relative">
+                <select 
+                  id="team-size-select" 
+                  class="appearance-none bg-[#18233C] border border-white/40 hover:border-white/70 rounded-[7px] pl-3.5 pr-9 py-2 text-[12.5px] font-medium text-white focus:outline-none cursor-pointer transition-colors"
+                >
+                  <option value="1" selected>10 people</option>
+                  <option value="1">1 person</option>
+                  <option value="2">2 people</option>
+                  <option value="3">3 people</option>
+                  <option value="5">5 people</option>
+                  <option value="10">10 people (Full Team)</option>
+                </select>
+                <img 
+                  src="./public/icons/chevron-down-white.svg" 
+                  alt="" 
+                  class="w-3.5 h-3.5 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none opacity-85"
+                />
+              </div>
+            </div>
+
+            <!-- Estimated Monthly Cost Output -->
+            <div class="pt-6 pb-6">
+              <p class="text-white/80 text-[13.5px] font-normal mb-2">
+                Estimated monthly Cost
+              </p>
+              <div id="calc-monthly-cost" class="text-white font-semibold text-[34px] sm:text-[38px] leading-[1.15] tracking-tight mb-3">
+                $1,733-$2,600
+              </div>
+              <p id="calc-summary-subtext" class="text-white/90 text-[12px] font-bold">
+                1 person 40 hours/ week each
+              </p>
+            </div>
+          </div>
+
+          <!-- CTA Button & Disclaimer -->
+          <div>
+            <a 
+              href="#quote" 
+              class="w-full inline-flex items-center justify-center bg-white hover:bg-slate-100 text-[#18233C] font-bold text-[13.5px] py-3.5 px-6 rounded-[7px] shadow-md transition-all duration-200 hover:shadow-lg active:scale-[0.99] mb-5"
+            >
+              Discuss this team
+            </a>
+
+            <p class="text-white/65 text-[11px] leading-[1.55] font-normal">
+              Planning estimate using 52 weeks ÷ 12 months. Final pricing, hours, role scope, and contract terms are confirmed in your consultation. Your business provides the required software and system access.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- Main JavaScript -->
   <script src="./js/main.js"></script>
 </body>
