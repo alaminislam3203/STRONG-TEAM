@@ -278,5 +278,40 @@ document.addEventListener('DOMContentLoaded', () => {
       founderVideo.controls = false;
     });
   }
+
+  // 8. FAQ Accordion Interactive Toggle
+  const faqItems = document.querySelectorAll('[data-faq-item]');
+
+  faqItems.forEach((item) => {
+    const trigger = item.querySelector('.faq-trigger');
+    const content = item.querySelector('.faq-content');
+    const icon = item.querySelector('.faq-icon');
+
+    if (trigger && content && icon) {
+      trigger.addEventListener('click', () => {
+        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+        // Close all other items first for a clean single-open accordion
+        faqItems.forEach((otherItem) => {
+          const otherTrigger = otherItem.querySelector('.faq-trigger');
+          const otherContent = otherItem.querySelector('.faq-content');
+          const otherIcon = otherItem.querySelector('.faq-icon');
+
+          if (otherTrigger && otherContent && otherIcon) {
+            otherTrigger.setAttribute('aria-expanded', 'false');
+            otherContent.classList.add('hidden');
+            otherIcon.src = './public/icons/plus-navy.svg';
+          }
+        });
+
+        // Toggle current item
+        if (!isExpanded) {
+          trigger.setAttribute('aria-expanded', 'true');
+          content.classList.remove('hidden');
+          icon.src = './public/icons/minus-navy.svg';
+        }
+      });
+    }
+  });
 });
 
