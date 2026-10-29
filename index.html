@@ -41,8 +41,8 @@
           <span class="nav-indicator absolute bottom-0 left-[-6px] right-[-6px] h-[2px] bg-brand-navActive rounded-full"></span>
         </a>
 
-        <!-- Dropdown Link: Services -->
-        <div class="relative" id="services-dropdown-wrapper">
+        <!-- Dropdown Link: Services (Mega Menu Card on Hover/Click) -->
+        <div class="relative py-4" id="services-dropdown-wrapper">
           <button 
             type="button"
             id="services-dropdown-btn"
@@ -58,23 +58,74 @@
             />
           </button>
 
-          <!-- Services Dropdown Menu -->
+          <!-- Services 6-Item Mega Menu Card (matching Figma 3x2 grid) -->
           <div 
             id="services-dropdown-menu"
-            class="hidden opacity-0 translate-y-2 transition-all duration-200 absolute left-0 mt-2 w-60 bg-white rounded-xl shadow-xl border border-slate-100 py-2.5 z-50"
+            class="hidden opacity-0 translate-y-2 transition-all duration-200 absolute left-1/2 -translate-x-[38%] top-full pt-1 w-[860px] xl:w-[960px] z-50"
           >
-            <a href="#virtual-assistants" class="block px-4 py-2.5 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-darkBlue transition-colors">
-              Customer Support Specialists
-            </a>
-            <a href="#back-office" class="block px-4 py-2.5 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-darkBlue transition-colors">
-              Dedicated Remote Teams
-            </a>
-            <a href="#sales-sdr" class="block px-4 py-2.5 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-darkBlue transition-colors">
-              Sales &amp; Lead Generation
-            </a>
-            <a href="#admin-ops" class="block px-4 py-2.5 text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-darkBlue transition-colors">
-              Back-Office &amp; Operations
-            </a>
+            <div class="bg-white rounded-[8px] shadow-[0_20px_50px_rgba(15,23,42,0.14)] border border-slate-100 px-10 py-9 grid grid-cols-3 gap-x-10 gap-y-8 text-left">
+              
+              <!-- Item 1: Customer Support -->
+              <a href="#services" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Customer Support
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Provide exceptional support to your Customers Via Phone, email or chat
+                </p>
+              </a>
+
+              <!-- Item 2: Operations Coordinator -->
+              <a href="#services" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Operations Coordinator
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Qualified conversations and full calendars, without the busywork.
+                </p>
+              </a>
+
+              <!-- Item 3: Sales support -->
+              <a href="#services" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Sales support
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Consistent outreach that helps your pipeline grow.
+                </p>
+              </a>
+
+              <!-- Item 4: Bookkeeping -->
+              <a href="#services" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Bookkeeping
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Keep your financial records organized and up to date
+                </p>
+              </a>
+
+              <!-- Item 5: Marketing assistant -->
+              <a href="#services" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Marketing assistant
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Create, schedule and manage your content across platforms.
+                </p>
+              </a>
+
+              <!-- Item 6: Administrative support -->
+              <a href="#services" class="group block rounded-lg p-2 -m-2 hover:bg-slate-50/80 transition-colors">
+                <h4 class="text-[#123524] group-hover:text-[#004DB0] font-semibold text-[18px] leading-[1.3] mb-2 transition-colors">
+                  Administrative support
+                </h4>
+                <p class="text-[#4B5563] text-[13px] leading-[1.55] font-normal">
+                  Reliable operational help that keeps every day moving.
+                </p>
+              </a>
+
+            </div>
           </div>
         </div>
 
