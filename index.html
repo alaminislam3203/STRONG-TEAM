@@ -181,28 +181,29 @@
   </header>
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section id="home" class="relative hero-bg overflow-hidden min-h-[560px] lg:h-[620px] xl:h-[650px] flex items-center">
+  <section id="home" class="relative hero-bg overflow-hidden min-h-[600px] lg:h-[630px] xl:h-[650px] flex items-center">
     
     <!-- Subtle Geometric Background Shapes (matching Figma left & right facets) -->
     <div class="hero-polygon-left-2 absolute inset-0 pointer-events-none"></div>
     <div class="hero-polygon-left absolute inset-0 pointer-events-none"></div>
+    <div class="hero-polygon-right absolute inset-0 pointer-events-none"></div>
     
     <!-- Diagonal Blue Accent Line on Bottom Right -->
     <div 
-      class="hidden lg:block absolute right-[-40px] bottom-[52px] w-[260px] h-[3px] bg-gradient-to-r from-[#0B65D6]/80 to-transparent rotate-[28deg] pointer-events-none z-20"
+      class="hidden lg:block absolute right-[-30px] bottom-[75px] w-[260px] h-[5px] bg-gradient-to-r from-[#1877F2]/80 to-transparent rotate-[26deg] pointer-events-none z-20"
     ></div>
 
     <!-- Main Container -->
     <div class="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[72px] py-14 lg:py-0 h-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-6">
       
       <!-- Left Column: Copy & CTAs -->
-      <div class="w-full lg:w-[50%] xl:w-[49%] text-left z-20 lg:mt-4">
+      <div class="w-full lg:w-[48%] xl:w-[47%] text-left z-20 lg:mt-2">
         <h1 class="text-white font-bold text-[36px] sm:text-[46px] lg:text-[52px] xl:text-[58px] leading-[1.18] tracking-[-0.01em] mb-6">
           Build the Team your<br />
           Business Needs.
         </h1>
 
-        <p class="text-white/85 font-normal text-[15.5px] sm:text-[17px] xl:text-[18.5px] leading-[1.6] max-w-[560px] mb-9">
+        <p class="text-white/85 font-normal text-[15.5px] sm:text-[17px] xl:text-[18.5px] leading-[1.6] max-w-[550px] mb-9">
           Experienced, dependable remote professionals who take work off your plate and move your business forward.
         </p>
 
@@ -224,16 +225,45 @@
         </div>
       </div>
 
-      <!-- Right Column: Geometric Diamond Collage -->
-      <div class="w-full lg:w-[50%] xl:w-[51%] relative flex items-center justify-center lg:justify-end">
+      <!-- Right Column: Real CSS Rotated Diamond Collage with 3 Freshly Generated Photos -->
+      <div class="w-full lg:w-[52%] xl:w-[53%] relative h-[430px] sm:h-[520px] lg:h-[650px] flex items-center justify-center">
         
-        <!-- Desktop / Tablet Geometric Collage Canvas -->
-        <div class="relative w-full max-w-[660px] lg:max-w-none lg:w-[740px] xl:w-[780px] aspect-[515/450] lg:mr-[-72px]">
-          <img 
-            src="./public/hero/hero-collage.png" 
-            alt="Experienced remote professionals collaborating and supporting clients" 
-            class="collage-mask w-full h-full object-cover object-right select-none"
-          />
+        <!-- Responsive Collage Stage -->
+        <div class="relative w-[360px] sm:w-[520px] lg:w-[680px] xl:w-[740px] h-full scale-[0.68] sm:scale-[0.88] lg:scale-100 origin-center lg:origin-right">
+          
+          <!-- 1. Large Right Diamond: Customer Support Specialist -->
+          <div 
+            class="diamond-frame absolute top-[-75px] right-[-175px] w-[470px] h-[470px] rounded-[46px] z-10"
+          >
+            <img 
+              src="./public/hero/support-agent.jpg" 
+              alt="Customer support specialist wearing a headset at an office desk"
+              class="object-center"
+            />
+          </div>
+
+          <!-- 2. Middle Left Diamond: Team Collaborating on Laptop -->
+          <div 
+            class="diamond-frame absolute top-[210px] left-[18px] w-[235px] h-[235px] rounded-[30px] z-20"
+          >
+            <img 
+              src="./public/hero/team-collaboration.jpg" 
+              alt="Three remote professionals collaborating around a laptop"
+              class="object-center"
+            />
+          </div>
+
+          <!-- 3. Bottom Center Diamond: One-on-One Office Discussion -->
+          <div 
+            class="diamond-frame absolute top-[415px] left-[242px] w-[170px] h-[170px] rounded-[22px] z-20"
+          >
+            <img 
+              src="./public/hero/office-discussion.jpg" 
+              alt="Two colleagues having a discussion at a modern office desk"
+              class="object-center"
+            />
+          </div>
+
         </div>
 
       </div>
