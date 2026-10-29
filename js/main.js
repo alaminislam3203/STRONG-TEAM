@@ -1,9 +1,5 @@
-/**
- * Strong Team Staffing — Navbar & Hero Interactive Script
- */
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Elements
+  // ==================== NAVBAR & MEGA MENU ====================
   const navbar = document.getElementById('navbar');
   const servicesDropdownBtn = document.getElementById('services-dropdown-btn');
   const servicesDropdownMenu = document.getElementById('services-dropdown-menu');
@@ -21,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navLinks = document.querySelectorAll('[data-nav-link]');
 
-  // 1. Desktop "Services" Mega Menu Card (Hover + Click Support)
   let isServicesOpen = false;
   let servicesHoverTimeout = null;
 
@@ -50,39 +45,34 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (servicesWrapper && servicesDropdownBtn) {
-    // Open on hover
     servicesWrapper.addEventListener('mouseenter', () => {
       clearTimeout(servicesHoverTimeout);
       toggleServicesDropdown(true);
     });
 
-    // Close on mouse leave
     servicesWrapper.addEventListener('mouseleave', () => {
       toggleServicesDropdown(false);
     });
 
-    // Also allow click toggle for touch/keyboard users
     servicesDropdownBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       toggleServicesDropdown();
     });
   }
 
-  // Close dropdown when clicking outside
   document.addEventListener('click', (e) => {
     if (isServicesOpen && servicesWrapper && !servicesWrapper.contains(e.target)) {
       toggleServicesDropdown(false);
     }
   });
 
-  // Close dropdown on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       toggleServicesDropdown(false);
     }
   });
 
-  // 2. Mobile Menu Drawer Toggle
+  // ==================== MOBILE MENU DRAWER ====================
   let isMobileMenuOpen = false;
 
   if (mobileMenuBtn && mobileMenu) {
@@ -95,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Mobile "Services" Accordion Toggle
   if (mobileServicesBtn && mobileServicesList) {
     mobileServicesBtn.addEventListener('click', () => {
       const isHidden = mobileServicesList.classList.contains('hidden');
@@ -104,10 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Active Nav Link Indicator Switching
   navLinks.forEach((link) => {
     link.addEventListener('click', () => {
-      // Remove active styles & indicator from all links
       navLinks.forEach((item) => {
         item.classList.remove('font-semibold', 'text-brand-navActive');
         item.classList.add('font-medium', 'text-brand-navText');
@@ -117,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Apply active styles & underline indicator to clicked link
       link.classList.remove('font-medium', 'text-brand-navText');
       link.classList.add('font-semibold', 'text-brand-navActive');
 
@@ -127,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Sticky Navbar Subtle Shadow on Scroll
   window.addEventListener('scroll', () => {
     if (window.scrollY > 10) {
       navbar.classList.add('shadow-md');
@@ -136,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 6. Interactive Team Cost Calculator ("Estimate Your cost")
+  // ==================== COST CALCULATOR SECTION ====================
   const roleCards = document.querySelectorAll('[data-role-card]');
   const calcRoleBadge = document.getElementById('calc-role-badge');
   const calcRoleTitle = document.getElementById('calc-role-title');
@@ -178,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   roleCards.forEach((card) => {
     card.addEventListener('click', () => {
-      // Reset all cards to unselected style
       roleCards.forEach((item) => {
         item.classList.remove('border-[#3E526E]', 'bg-[#E3E7EE]');
         item.classList.add('border-slate-300', 'bg-white', 'hover:bg-slate-50');
@@ -193,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Set clicked card to active style
       card.classList.remove('border-slate-300', 'bg-white', 'hover:bg-slate-50');
       card.classList.add('border-[#3E526E]', 'bg-[#E3E7EE]');
       const activeLabel = card.querySelector('.role-label');
@@ -206,7 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
         activeRadio.src = './public/icons/radio-checked-navy.svg';
       }
 
-      // Update role details & rates
       currentMinRate = Number(card.dataset.roleMin) || 10;
       currentMaxRate = Number(card.dataset.roleMax) || 15;
 
@@ -240,10 +222,9 @@ document.addEventListener('DOMContentLoaded', () => {
     teamSizeSelect.addEventListener('change', updateCostEstimate);
   }
 
-  // Initialize slider track fill on page load
   updateSliderTrackFill();
 
-  // 7. Founder Story Video Play / Pause Controls
+  // ==================== FOUNDER STORY VIDEO ====================
   const founderVideo = document.getElementById('founder-video');
   const founderPlayOverlay = document.getElementById('founder-play-overlay');
   const watchStoryBtn = document.getElementById('watch-story-btn');
@@ -293,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8. FAQ Accordion Interactive Toggle
+  // ==================== FAQ ACCORDION ====================
   const faqItems = document.querySelectorAll('[data-faq-item]');
 
   faqItems.forEach((item) => {
@@ -305,7 +286,6 @@ document.addEventListener('DOMContentLoaded', () => {
       trigger.addEventListener('click', () => {
         const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
 
-        // Close all other items first for a clean single-open accordion
         faqItems.forEach((otherItem) => {
           const otherTrigger = otherItem.querySelector('.faq-trigger');
           const otherContent = otherItem.querySelector('.faq-content');
@@ -318,7 +298,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
 
-        // Toggle current item
         if (!isExpanded) {
           trigger.setAttribute('aria-expanded', 'true');
           content.classList.remove('hidden');
@@ -328,4 +307,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-

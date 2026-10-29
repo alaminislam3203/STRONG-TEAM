@@ -1,7 +1,4 @@
-/**
- * Strong Team Staffing — Tailwind Configuration
- */
-
+// ==================== TAILWIND CONFIGURATION ====================
 tailwind.config = {
   theme: {
     extend: {
@@ -22,4 +19,3 @@ tailwind.config = {
     }
   }
 };
-

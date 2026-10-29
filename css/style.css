@@ -1,13 +1,8 @@
-/**
- * Strong Team Staffing — Custom Stylesheet
- */
-
-/* Hero Background Gradient matching Figma 1:1 */
+/* ==================== HERO SECTION ==================== */
 .hero-bg {
   background: linear-gradient(115deg, #022047 0%, #032B60 38%, #013E8F 72%, #004DB0 100%);
 }
 
-/* Subtle dark geometric overlays in bottom-left matching Figma */
 .hero-polygon-left {
   clip-path: polygon(0 76%, 12% 100%, 0 100%);
   background: linear-gradient(180deg, rgba(1, 22, 52, 0.72) 0%, rgba(1, 16, 40, 0.95) 100%);
@@ -18,13 +13,11 @@
   background: linear-gradient(135deg, rgba(2, 34, 78, 0.45) 0%, rgba(1, 24, 56, 0.65) 100%);
 }
 
-/* Bottom-right subtle dark wedge under the diamonds */
 .hero-polygon-right {
   clip-path: polygon(45% 100%, 100% 72%, 100% 100%);
   background: linear-gradient(160deg, rgba(0, 38, 92, 0.7) 0%, rgba(1, 24, 58, 0.95) 100%);
 }
 
-/* Rotated Diamond Image Frame (45deg rounded square with counter-rotated upright photo) */
 .diamond-frame {
   transform: rotate(45deg);
   overflow: hidden;
@@ -44,12 +37,12 @@
   transform: rotate(-45deg) scale(1.48);
 }
 
-/* Why Choose Us Section Soft Multi-Stop Gradient matching Figma 1:1 */
+/* ==================== WHY CHOOSE US SECTION ==================== */
 .why-choose-bg {
   background: linear-gradient(108deg, #E8EEF5 0%, #E7F2FD 42%, #F6FBE9 74%, #FDF8E1 100%);
 }
 
-/* Cost Calculator Custom White Range Slider */
+/* ==================== COST CALCULATOR SECTION ==================== */
 .cost-slider {
   -webkit-appearance: none;
   appearance: none;
@@ -87,5 +80,3 @@
   cursor: pointer;
   transition: transform 0.15s ease;
 }
-
-

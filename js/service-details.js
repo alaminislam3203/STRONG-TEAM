@@ -1,20 +1,14 @@
-/**
- * Strong Team Staffing — Dynamic Service Details Page Renderer
- */
-
+// ==================== SERVICE DETAILS RENDERER ====================
 document.addEventListener('DOMContentLoaded', () => {
   const servicesData = window.SERVICES_DATA || {};
   const params = new URLSearchParams(window.location.search);
   const requestedSlug = params.get('service') || 'customer-support';
 
-  // Fallback to customer-support if slug not found
   const service = servicesData[requestedSlug] || servicesData['customer-support'];
   if (!service) return;
 
-  // Update Page Title
   document.title = `${service.title} — Strong Team Staffing`;
 
-  // Populate Hero & Overview Elements
   const breadcrumbEl = document.getElementById('detail-breadcrumb');
   const badgeEl = document.getElementById('detail-badge');
   const titleEl = document.getElementById('detail-title');
@@ -43,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (idealForEl) idealForEl.textContent = service.idealFor;
   if (rateEl) rateEl.textContent = service.rateRange;
 
-  // Populate Responsibilities List
+  // ==================== RESPONSIBILITIES LIST ====================
   if (responsibilitiesEl && Array.isArray(service.responsibilities)) {
     responsibilitiesEl.innerHTML = service.responsibilities
       .map(
@@ -56,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .join('');
   }
 
-  // Populate Tools Pills
+  // ==================== TOOLS & PLATFORMS ====================
   if (toolsEl && Array.isArray(service.tools)) {
     toolsEl.innerHTML = service.tools
       .map(
@@ -68,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .join('');
   }
 
-  // Populate Sidebar "Other Staffing Services" Switcher
+  // ==================== OTHER SERVICES SWITCHER ====================
   if (otherLinksEl) {
     otherLinksEl.innerHTML = Object.values(servicesData)
       .map((item) => {
@@ -92,4 +86,3 @@ document.addEventListener('DOMContentLoaded', () => {
       .join('');
   }
 });
-
