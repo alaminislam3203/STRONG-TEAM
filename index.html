@@ -8,54 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS CDN & External Config -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              navy: '#1E2F44',
-              darkBlue: '#072A60',
-              midBlue: '#003F91',
-              brightBlue: '#004FB6',
-              gold: '#C19D53',
-              navText: '#5A6D85',
-              navActive: '#1E2F44',
-            }
-          },
-          fontFamily: {
-            sans: ['Montserrat', 'Plus Jakarta Sans', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    /* Custom Geometric Hero Styling matching Figma 1:1 */
-    .hero-bg {
-      background: linear-gradient(100deg, #002350 0%, #012B63 32%, #02336B 55%, #012964 100%);
-    }
-
-    /* Subtle dark geometric overlays in bottom-left matching Figma */
-    .hero-polygon-left {
-      clip-path: polygon(0 78%, 12% 100%, 0 100%);
-      background: linear-gradient(180deg, rgba(1, 22, 52, 0.7) 0%, rgba(1, 18, 44, 0.95) 100%);
-    }
-
-    .hero-polygon-left-2 {
-      clip-path: polygon(0 58%, 35% 100%, 0 100%);
-      background: linear-gradient(135deg, rgba(2, 34, 78, 0.45) 0%, rgba(1, 24, 56, 0.65) 100%);
-      border-top: 1px solid rgba(56, 128, 220, 0.15);
-    }
-
-    /* Seamless fade on left edge of hero collage */
-    .collage-mask {
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 100%);
-      mask-image: linear-gradient(to right, transparent 0%, black 7%, black 100%);
-    }
-  </style>
+  <script src="./js/tailwind.config.js"></script>
+  <!-- External Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body class="font-sans antialiased text-slate-800 bg-white overflow-x-hidden selection:bg-brand-brightBlue selection:text-white">
 
